@@ -1,11 +1,16 @@
+import React from 'react';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 
-const DefaultLayout = ({ children }) => {
+interface Props {
+    children: React.ReactNode;
+}
+
+const DefaultLayout = ({ children }: Props) => {
     return (
         <div>
             <Navbar />
-            {children}
+            <main>{children}</main>
             <Footer />
         </div>
     );
